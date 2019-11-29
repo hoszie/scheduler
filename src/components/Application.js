@@ -22,11 +22,26 @@ export default function Application() {
       ...state,
       appointments
     });
-    axios.put(`/api/appointments/${id}`, { interview });
-
-    console.log(id, interview);
+    return axios.put(`/api/appointments/${id}`, { interview });
   }
+  
+  function cancelInterview(id) {
 
+    const nullAppointment = {
+      ...state.appointments[id],
+      interview: null
+    };
+    const nullAppointments = {
+      ...state.appointments,
+      [id]: nullAppointment
+    };
+    setState({
+      ...state,
+      nullAppointments
+    });
+    return axios.delete(`/api/appointments/${id}`);
+  }
+ 
   const [state, setState] = useState({
     day: "Monday",
     days: [],
@@ -50,7 +65,7 @@ export default function Application() {
           appointments: all[1].data,
           interviewers: all[2].data,
         }));
-    })
+      })
   }, []);
 
   const appointmentList = appointments.map(appointment => {
@@ -62,6 +77,7 @@ export default function Application() {
             interview={interview}
             interviewers={interviewers}
             bookInterview={bookInterview}
+            cancelInterview={cancelInterview}
             />
           );
   })

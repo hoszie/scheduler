@@ -8,6 +8,24 @@ export default function useApplicationData() {
   const SET_APPLICATION_DATA = "SET_APPLICATION_DATA";
   const SET_INTERVIEW = "SET_INTERVIEW";
 
+  function reducer(state, action) {
+    switch (action.type) {
+      case SET_DAY:
+        return { ...state, day: action.day }
+      case SET_APPLICATION_DATA: 
+        return {}  
+      case SET_INTERVIEW: {
+        return { ...state, 
+          
+        } 
+      }
+      default:
+        throw new Error(
+          `Tried to reduce with unsupported action type: ${action.type}`
+        );
+    } 
+  }
+
   function bookInterview(id, interview) {
     const appointment = {
       ...state.appointments[id],
@@ -21,6 +39,8 @@ export default function useApplicationData() {
       ...state,
       appointments
     });
+    console.log('this is the appt', appointment);
+    console.log('this is the appts', appointments);
     return axios.put(`/api/appointments/${id}`, { interview });
   }
 
@@ -47,6 +67,8 @@ export default function useApplicationData() {
     appointments: {},
     interviewers: {},
   });
+  console.log('state', state)
+  console.log('setState', setState)
 
   const setDay = day => setState({ ...state, day });
 

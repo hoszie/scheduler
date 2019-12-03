@@ -4,6 +4,12 @@ import "components/InterviewerList.scss";
 import PropTypes from 'prop-types';
 
 export default function InterviewerList(props) {
+
+  InterviewerList.propTypes = {
+    value: PropTypes.number,
+    onChange: PropTypes.func.isRequired
+  };
+
   const interviewers = props.interviewers.map(interviewer => {
     return (
       <InterviewerListItem

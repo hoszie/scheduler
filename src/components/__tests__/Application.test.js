@@ -143,7 +143,6 @@ describe("Application", () => {
     expect(getByText(appointment, "Are you sure you would like to delete?")).toBeInTheDocument();
     fireEvent.click(getByText(appointment, "Confirm"));
     await waitForElement( () => getByText(appointment, "Deleting"));
-  
   });
 
 });

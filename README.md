@@ -26,6 +26,16 @@ npm run storybook
 
 This is my first simple React app which allows a user to schedule appointments with an array of interviewers during a given week. You are able to save, edit and cancel any appointment. 
 
+## Built With
+
+- React
+- Axios
+
+### Testing
+
+- Jest
+- Cypress
+
 ## Screenshots
 
 !["The delete form allowing the user to confirm or cancel deleting their appointment"](https://github.com/hoszie/scheduler/blob/master/docs/able_to_delete.png?raw=true)

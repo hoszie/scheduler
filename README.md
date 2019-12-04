@@ -28,10 +28,10 @@ This is my first simple React app which allows a user to schedule appointments w
 
 ## Screenshots
 
-!["Screenshot of tweet main display"](https://github.com/hoszie/tweeter/blob/master/docs/tweeter-desktop-display.png?raw=true)
+!["The delete form allowing the user to confirm or cancel deleting their appointment"](https://github.com/hoszie/scheduler/blob/master/docs/able_to_delete.png?raw=true)
 
-!["Changed responsive design when viewed on a smaller viewport"](https://github.com/hoszie/tweeter/blob/master/docs/changed-responsive-design.png?raw=true)
+!["Shows a mixture of booked and filled appointment times on Wednesday, while hovering on Tuesday"](https://github.com/hoszie/scheduler/blob/master/docs/booked_appointments_onHover_day_change.png?raw=true)
 
-!["Shows highlighted tweet that is in focus by mouseover plus the negative counter for a tweet that is too long"](https://github.com/hoszie/tweeter/blob/master/docs/highlighted-tweet-negative-counter.png?raw=true)
+!["An unfocused appointment and an in focus appointment showing the delete and edit buttons"](https://github.com/hoszie/scheduler/blob/master/docs/booked_appointments_with_onHover_highlight.png?raw=true)
 
-!["Shows the error message when trying to submit an empty tweet"](https://github.com/hoszie/tweeter/blob/master/docs/Error-message.png?raw=true)
+!["Booking an appointment with the student's name and list of available interviewers to select"](https://github.com/hoszie/scheduler/blob/master/docs/booking_an_appointment.png?raw=true)
